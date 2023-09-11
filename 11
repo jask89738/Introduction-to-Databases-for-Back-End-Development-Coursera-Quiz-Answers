@@ -1,0 +1,310 @@
+Question 1)
+What is a Database in computing?
+
+A collection of tables of data stored and accessed electronically.
+A collection of organized data stored and accessed electronically.
+Question 2)
+Which database model uses only tables to store data?
+
+Flat Files databases
+NoSQL databases
+Relational databases
+Question 3)
+Which of the following is a key advantage of organizing data in tables?
+
+To provide a clear view of data
+To store a large amount of data
+To protect data
+Question 4)
+The foreign key can be used to identify a specific record of data in a relational database.
+
+True
+False
+Question 5)
+Big data contains a wide variety of data, arriving in increasing volumes and at high velocity.
+
+True
+False
+ 
+
+Knowledge check: SQL syntax review
+Question 1)
+What makes SQL a popular database language? Select all that apply.
+
+It is an easy programming language to understand and learn.
+It works with different relational database management systems.
+It is a portable programming language.
+Question 2)
+Which of the following commands belong to the SQL data manipulation language (DML)? Select all that apply.
+
+Insert
+Update
+Select
+Create
+Question 3)
+The SELECT command should be used to retrieve data from a database table.
+
+False
+True
+Question 4)
+Which SQL syntax should be used to create a student table?
+
+CREATE Student TABLE;
+CREATE TABLE Student;
+Question 5)
+Choose the correct syntax to create a college database in SQL.
+
+CREATE DATABASE College;
+CREATE College DATABASE;
+ 
+
+Knowledge check: Database structure
+Question 1)
+What term is used to describe the complete information about one specific staff member in a college database that contains data about staff?
+
+Table
+Column
+Record
+Question 2)
+What is the minimum number of tables that must be present in a relational database?
+
+Two tables
+One table
+Three tables
+Question 3)
+What is the name of the attribute that is chosen in the database to uniquely identify each record in a table?
+
+Secondary Key
+Foreign Key
+Primary Key
+Question 4)
+Which attribute could be used as a primary key in the following customer table?
+
+Customer email address
+Customer first name
+Customer last name
+Question 5)
+Which of the following keys can you select as the primary key in a relational database? Select all that apply.
+
+Alternate key
+Foreign Key
+Candidate Key
+Composite Key
+ 
+
+Visit this link:  Module quiz: Introduction to Databases Quiz Answers
+
+ 
+
+ 
+
+WEEK 2 QUIZ ANSWERS
+
+Knowledge check: Create, insert and select
+Question 1)
+The following SQL statement contains the syntax to create a product table with two columns ID and price:
+
+CREATE TABLE product_table (ID, price);
+
+True
+False
+Question 2)
+You need to create a table for bank account records in a financial database. Which of the following SQL statements can you use to complete this task?
+
+CREATE TABLE bank_account (account_number INT, balance DECIMAL);
+CREATE ENTITY bank_account (account_number INT, balance DECIMAL);
+Question 3)
+Select the right SQL statement to insert a new record of data into three columns of a table called “Games” with the following values:
+
+GameID = 1, gameDate = 2022-10-10 and score = 3
+
+INSERT INTO games (GameID, gameDate, score) CONSTRAINT (1, “2022-10-10”, 3);
+INSERT INTO games (GameID, gameDate, score) VALUES (1, “2022-10-10”, 3);
+Question 4)
+A player with ID = 5, name = “Tina” and age = 23 must be added to the “Players” table for a soccer club database. Select the right SQL syntax to insert the player data into the table.
+
+INSERT INTO TABLE Players (ID, name, age) VALUES (5, “Tina”, 23);
+INSERT INTO Players (ID, name, age) VALUES (5, “Tina”, 23);
+Question 5)
+A hockey team requires all available data on their players for an upcoming meeting. Choose the correct SQL statement to select all data available in the players’ table
+
+SELECT * players;
+SELECT * FROM players;
+ 
+
+Knowledge check: Update and Delete
+Question 1)
+Which of the following statements is the correct command syntax to update a table in SQL?
+
+UPDATE column;
+UPDATE table_name;
+UPDATE Table table_name;
+Question 2)
+What is the missing SQL keyword in the following SQL statement to update the customer’s table?
+
+UPDATE Customers
+___ ContactName = ‘Jack Molly’
+WHERE CustomerID = 10;
+
+ANY
+SET
+Question 3)
+Which of the following SQL statements can be used to update data for a student in the “Students” table?
+
+UPDATE students WHERE ID = 18 SET name = ‘Karl’;
+UPDATE students SET name = ‘Karl’ AND ID = 18;
+UPDATE students SET name = ‘Karl’ WHERE ID = 18;
+Question 4)
+The following table contains data about customers. The customer data should be removed completely, but without deleting the table. Identify which statement can be used to delete all records of data from the customers table without deleting the table itself.
+
+DROP TABLE customers
+DELETE FROM customers;
+Question 5)
+The ‘WHERE’ keyword is used in SQL to specify a condition to update or delete data from a table.
+
+False
+True
+ 
+
+Visit this link:  Module quiz: Create, Read, Update and Delete (CRUD) Operations Quiz Answers
+
+ 
+
+ 
+
+WEEK 3 QUIZ ANSWERS
+
+ 
+
+Self-review: ORDER BY and WHERE
+Question 1)
+The ORDER BY keyword in SQL sorts the records of a table column in descending order by default.
+
+True
+False
+Question 2)
+The output result of the following SQL statement is the data of all customers from Germany, as * in this context means “all columns”.
+
+SELECT * FROM customers WHERE Country = “Germany”;
+
+True
+False
+Question 3)
+Choose the SQL statement that shows a list of all customers who live in India organized alphabetically from A to Z within a database table named “customers”.
+
+SELECT * FROM customers WHERE country = “India” ORDER BY FirstName DESC;
+SELECT * FROM customers WHERE country = “India” ORDER BY FirstName ASC;
+Question 4)
+Identify the effect of the following SQL statement on the “Staff” table:
+
+SELECT * FROM staff ORDER BY Country, StaffName;
+Displays the results ordered by country first then staff name.
+Orders the result by country and ignores the staff name.
+ 
+
+Visit this link:  Module quiz: SQL operators and sorting and filtering data Quiz Answers
+
+ 
+
+ 
+
+WEEK 4 QUIZ ANSWERS
+
+Knowledge check: Database schema
+Question 1)
+A conceptual database schema is a blueprint that defines how data is organized and related in a relational database.
+
+False
+True
+Question 2)
+A conceptual database schema defines three essential parts. Select all that apply.
+
+Tables
+Relationships
+Attributes
+Question 3)
+A key advantage of developing a conceptual database schema is that it provides – in advance – a clear view of what tables are necessary and the way they will be connected.
+
+True
+False
+Question 4)
+The foreign key is used to connect tables in a database schema.
+
+True
+False
+Question 5)
+A bookstore schema includes two tables: customers and orders implemented as follows:
+
+CREATE TABLE Customers( CustomerID int NOT NULL, 
+Name VARCHAR(50), PRIMARY KEY (CustomerID));
+
+CREATE TABLE Orders ( OrderID int NOT NULL, CustomerID int, 
+PRIMARY KEY (OrderID), FOREIGN KEY (CustomerID) REFERENCES 
+customers(CustomersID));
+True or false. The two tables are connected through the OrderID attribute.
+
+False
+True
+ 
+
+Knowledge check: Defining keys
+Question 1)
+Which column can be used as the primary key in the following student table?
+
+Email
+Date of Birth
+Student name
+Question 2)
+What type of primary key is used in the following Sales table?
+
+A primary key represented by the Customer ID column.
+A composite primary key represented by Customer ID and Product Code columns.
+Question 3)
+You need to create a table for staff members in a college. You must define the email address column as the primary key. Can the following SQL syntax be used to complete this task?
+
+CREATE TABLE Staff( Email VARCHAR(200) NOT NULL, Name varchar(255) NOT NULL, CONSTRAINT PK_Email PRIMARY KEY (Email));
+
+No
+Yes
+Question 4)
+The following SQL code defines three primary keys: SalesID, CustomerID and ProductID.
+
+CONSTRAINT SalesID PRIMARY KEY (customerID, productID);
+
+False
+True
+Question 5)
+Which of the following statements is the correct SQL syntax to define a foreign key that links the orders table with the customers table in the following diagram?
+
+CREATE TABLE Orders ( OrderID int NOT NULL, CustomerID int, PRIMARY KEY (OrderID), FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID));
+CREATE TABLE Orders ( OrderID int NOT NULL, CustomerID int, PRIMARY KEY (OrderID), FOREIGN KEY (CustomerID) REFERENCES Customers(OrderID));
+Knowledge Check: Database normalization
+Question 1)
+Which of the following is a key aim of database normalization? Select all that apply.
+
+Avoid errors during data modifications
+Simplify data queries
+Minimize data duplication
+Question 2)
+True or false. The first normal form allows for the storage of multiple values in table fields.
+
+True
+False
+Question 3)
+Partial Dependency occurs when a non-primary key attribute is functionally dependent on part of a composite key. This action violates which of the three normal forms?
+
+Second normal form
+First normal form
+Third normal form
+Question 4)
+True or false. Transitive dependency occurs when a non-key attribute determines the values of one or more other attributes, violating the third normal form criteria.
+
+False
+True
+Question 5)
+What actions should you take to ensure that a database is in first normal form? Select all that apply.
+
+Connect your table with other tables in the database using a foreign key.
+Eliminate repeating groups of data within individual tables.
+Create a separate table for each set of related data.
+ 
